@@ -9,11 +9,12 @@ public class Car {
     ;
 
     // Constructor
-    public Car(String make, String model, String colour, int year){
+    public Car(String make, String model, int year, String colour){
         this.make = make;
         this.model = model;
-        this.colour = colour;
         this.year = year;
+        this.colour = colour;
+    
     }
 
     // Getter for make
@@ -26,15 +27,15 @@ public class Car {
         return this.model;
     }
 
-     // Getter for colour
-     public String getColour() {
-        return this.colour;
-    }
-
     // Getter for year
     public int getYear() {
         return this.year;
     }
+
+     // Getter for colour
+     public String getColour() {
+        return this.colour;
+    }   
 
     // Setter for colour
     public void setColour(String colour) {
@@ -43,8 +44,23 @@ public class Car {
 
     // Method to get the details of the car
     public String getDetails() {
-        return this.make + " " + this.model + " " + this.colour + " " + this.year;
+        return this.make + " " + this.model + " " + this.year + " " + this.colour;
     }
 
+
+    public static void main(String[] args) {
+        Car car1 = new Car("Volvo", "V40", 2012, "blue");
+        Car car2 = new Car("Porsche", "Panamera", 2009, "red");
+        Car car3 = new Car("Audi", "A3", 2018, "grey");
+
+        System.out.println(car1.getDetails());
+        System.out.println(car2.getDetails());
+        System.out.println(car3.getDetails());
+    }
+
+   
 }
+
+        
+
 
