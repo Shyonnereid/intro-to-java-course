@@ -20,19 +20,40 @@ public class LeapYearTest
         assertEquals(true, LeapYear.get(400));
     }
 
-
     @Test
     @DisplayName("returns true if input is 2000")
     public void returnsTrueIfInputIs2000() {
         assertEquals(true, LeapYear.get(2000));
     }
 
-
-  @Test
+    @Test
     @DisplayName("returns false if input is 3001")
     public void returnsFalseIfInputIs3001() {
         assertEquals(false, LeapYear.get(3001));
     }
-//     }
 
- }
+    @Test
+    @DisplayName("returns false if input is 1700")
+    public void returnsFalseIfInputIs1700() {
+        assertEquals(false, LeapYear.get(1700));
+    }
+
+    @Test
+    @DisplayName("returns true if input is 2004")
+    public void returnsTrueIfInputIs2004() {
+        assertEquals(true, LeapYear.get(2004));
+    }
+
+    @Test
+    @DisplayName("returns false if input is 1800")
+    public void returnsFalseIfInputIs2004() {
+        assertEquals(false, LeapYear.get(1800));
+    }
+
+    @Test
+    @DisplayName("returns false if input is 2003")
+    public void returnsFalseIfInputIs2003() {
+        assertEquals(false, LeapYear.get(2003));
+    }
+
+}
