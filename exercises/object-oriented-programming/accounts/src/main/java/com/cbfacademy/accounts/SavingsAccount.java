@@ -11,10 +11,14 @@ public class SavingsAccount extends Account {
 
     // Applies interest to the account 
     public void applyInterest() {
-        setBalance(getBalance() + getBalance() * interestRate / 100);
+        // setBalance(getBalance() + getBalance() * interestRate / 100);
+        double currentbalance = getBalance();
+        double interestamount = currentbalance * interestRate / 100;
+        double newbalance = currentbalance + interesamount;
+        setBalance(newbalance);
     }
 
-    // Returns the current interest rate
+    // Returns the current interest rat
     public double getInterestRate() {
         return this.interestRate;
     }

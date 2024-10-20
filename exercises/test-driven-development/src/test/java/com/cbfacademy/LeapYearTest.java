@@ -1,19 +1,15 @@
 package com.cbfacademy;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 @DisplayName("LeapYearTest")
-public class LeapYearTest
 
-{
-
+public class LeapYearTest {
     @Test
     @DisplayName("returns true if input is 400")
     public void returnsTrueIfInputIs400() {
@@ -55,5 +51,4 @@ public class LeapYearTest
     public void returnsFalseIfInputIs2003() {
         assertEquals(false, LeapYear.get(2003));
     }
-
 }

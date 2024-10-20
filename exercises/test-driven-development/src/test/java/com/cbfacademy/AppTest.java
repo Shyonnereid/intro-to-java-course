@@ -1,5 +1,7 @@
 package com.cbfacademy;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -7,14 +9,15 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-@DisplayName(value = "Basic Test Suite")
+@DisplayName("Basic Test Suite")
 public class AppTest {
 
-    @Test
-    @DisplayName("creates the app")
-    public void createsAnApp() {
-        final App app = new App();
+    // Create an instance of the FizzBuzz class to test
+    final FizzBuzz fizzBuzz = new FizzBuzz();
 
-        assertThat(app, is(notNullValue()));
+    @Test
+    @DisplayName("prints Fizz")
+    public void printsFizz() {
+        assertEquals("Fizz", FizzBuzz.get(3));
     }
-}
+    }
